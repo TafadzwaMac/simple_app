@@ -52,7 +52,7 @@ git clone https://github.com/praisetechzw/simple_app.git
 
 2. Navigate to the project directory
 ```bash
-cd flutter_auth_app
+cd simple_app
 ```
 
 3. Install dependencies
@@ -75,7 +75,7 @@ flutter run
 - material: ^2.0.0
 
 ## 🏗️ Project Structure
-
+```
 lib/
 ├── main.dart # App entry point
 ├── screens/ # Screen widgets
