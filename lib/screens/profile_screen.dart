@@ -93,9 +93,9 @@ class ProfileScreen extends StatelessWidget {
                     _buildProfileCard(context, [
                       _buildProfileItem(context, Icons.email_outlined, 'Email', email),
                       const Divider(),
-                      _buildProfileItem(context, Icons.phone_outlined, 'Phone', '+1 234 567 8900'),
+                      _buildProfileItem(context, Icons.phone_outlined, 'Phone', '+263 78 622 3289'),
                       const Divider(),
-                      _buildProfileItem(context, Icons.location_on_outlined, 'Address', '123 Main St, City, Country'),
+                      _buildProfileItem(context, Icons.location_on_outlined, 'Address', '123 ColdStream, Chimhoyi, Zimbabwe'),
                     ]),
                     
                     const SizedBox(height: 24),
