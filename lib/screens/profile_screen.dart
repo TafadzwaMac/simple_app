@@ -38,7 +38,8 @@ class ProfileScreen extends StatelessWidget {
                       ),
                       child: CircleAvatar(
                         radius: 50,
-                        backgroundColor: Theme.of(context).primaryColor.withOpacity(0.2),
+                        backgroundColor:
+                            Theme.of(context).primaryColor.withOpacity(0.2),
                         child: Icon(
                           Icons.person,
                           size: 50,
@@ -58,7 +59,8 @@ class ProfileScreen extends StatelessWidget {
                     const SizedBox(height: 8),
                     // Role/Position
                     Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 12, vertical: 6),
                       decoration: BoxDecoration(
                         color: Theme.of(context).primaryColor.withOpacity(0.2),
                         borderRadius: BorderRadius.circular(20),
@@ -75,7 +77,7 @@ class ProfileScreen extends StatelessWidget {
                   ],
                 ),
               ),
-              
+
               // Profile Information
               SingleChildScrollView(
                 padding: const EdgeInsets.all(20.0),
@@ -91,13 +93,16 @@ class ProfileScreen extends StatelessWidget {
                     ),
                     const SizedBox(height: 16),
                     _buildProfileCard(context, [
-                      _buildProfileItem(context, Icons.email_outlined, 'Email', email),
+                      _buildProfileItem(
+                          context, Icons.email_outlined, 'Email', email),
                       const Divider(),
-                      _buildProfileItem(context, Icons.phone_outlined, 'Phone', '+263 78 622 3289'),
+                      _buildProfileItem(context, Icons.phone_outlined, 'Phone',
+                          '+263 78 622 3289'),
                       const Divider(),
-                      _buildProfileItem(context, Icons.location_on_outlined, 'Address', '123 ColdStream, Chimhoyi, Zimbabwe'),
+                      _buildProfileItem(context, Icons.location_on_outlined,
+                          'Address', '123 ColdStream, Chimhoyi, Zimbabwe'),
                     ]),
-                    
+
                     const SizedBox(height: 24),
                     const Text(
                       'Account Settings',
@@ -108,7 +113,7 @@ class ProfileScreen extends StatelessWidget {
                     ),
                     const SizedBox(height: 16),
                     _buildSettingsCard(context),
-                    
+
                     const SizedBox(height: 24),
                     // Logout Button
                     SizedBox(
@@ -117,12 +122,13 @@ class ProfileScreen extends StatelessWidget {
                         onPressed: () {
                           Navigator.pushReplacement(
                             context,
-                            MaterialPageRoute(builder: (context) => const LoginScreen()),
+                            MaterialPageRoute(
+                                builder: (context) => const LoginScreen()),
                           );
                         },
                         style: ElevatedButton.styleFrom(
                           padding: const EdgeInsets.symmetric(vertical: 16),
-                          backgroundColor: Colors.red.shade400,
+                          backgroundColor: Colors.purple.shade400,
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(12),
                           ),
@@ -168,7 +174,8 @@ class ProfileScreen extends StatelessWidget {
     );
   }
 
-  Widget _buildProfileItem(BuildContext context, IconData icon, String label, String value) {
+  Widget _buildProfileItem(
+      BuildContext context, IconData icon, String label, String value) {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 8.0),
       child: Row(
@@ -263,4 +270,4 @@ class ProfileScreen extends StatelessWidget {
       },
     );
   }
-} 
+}

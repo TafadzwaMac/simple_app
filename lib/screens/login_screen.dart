@@ -25,9 +25,9 @@ class _LoginScreenState extends State<LoginScreen> {
             padding: const EdgeInsets.all(24.0),
             child: Form(
               key: _formKey,
-        child: Column(
+              child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
+                children: [
                   const SizedBox(height: 60),
                   // Logo or Brand Image
                   Container(
@@ -64,10 +64,10 @@ class _LoginScreenState extends State<LoginScreen> {
                   const SizedBox(height: 40),
                   // Email Field
                   TextFormField(
-              controller: _emailController,
+                    controller: _emailController,
                     keyboardType: TextInputType.emailAddress,
                     decoration: InputDecoration(
-                labelText: 'Email',
+                      labelText: 'Email',
                       hintText: 'Enter your email',
                       prefixIcon: const Icon(Icons.email_outlined),
                       border: OutlineInputBorder(
@@ -95,14 +95,14 @@ class _LoginScreenState extends State<LoginScreen> {
                       }
                       return null;
                     },
-            ),
-            const SizedBox(height: 16),
+                  ),
+                  const SizedBox(height: 16),
                   // Password Field
                   TextFormField(
-              controller: _passwordController,
+                    controller: _passwordController,
                     obscureText: !_isPasswordVisible,
                     decoration: InputDecoration(
-                labelText: 'Password',
+                      labelText: 'Password',
                       hintText: 'Enter your password',
                       prefixIcon: const Icon(Icons.lock_outline),
                       suffixIcon: IconButton(
@@ -158,10 +158,10 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                       ),
                     ),
-            ),
-            const SizedBox(height: 24),
+                  ),
+                  const SizedBox(height: 24),
                   // Login Button
-            ElevatedButton(
+                  ElevatedButton(
                     onPressed: _isLoading
                         ? null
                         : () async {
@@ -175,15 +175,16 @@ class _LoginScreenState extends State<LoginScreen> {
                                   const Duration(seconds: 2)); // Mock delay
 
                               if (mounted) {
-                Navigator.pushReplacement(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => ProfileScreen(
-                      email: _emailController.text,
-                      name: 'John Doe', // This would come from backend
-                    ),
-                  ),
-                );
+                                Navigator.pushReplacement(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => ProfileScreen(
+                                      email: _emailController.text,
+                                      name:
+                                          'John Doe', // This would come from backend
+                                    ),
+                                  ),
+                                );
                               }
                             }
                           },
@@ -222,8 +223,8 @@ class _LoginScreenState extends State<LoginScreen> {
                       ),
                       GestureDetector(
                         onTap: () {
-                Navigator.push(
-                  context,
+                          Navigator.push(
+                            context,
                             MaterialPageRoute(
                                 builder: (context) => const SignupScreen()),
                           );
@@ -253,4 +254,4 @@ class _LoginScreenState extends State<LoginScreen> {
     _passwordController.dispose();
     super.dispose();
   }
-} 
+}
